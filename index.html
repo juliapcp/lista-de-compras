@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="shortcut icon" href="./icon/favicon-16x16-dunplab-manifest-9314.png" type="image/png">
+  <link rel="icon" href="./icon/favicon-16x16-dunplab-manifest-9314.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheet/style.css">
+  <title>Lista de Compras</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('./sw.js').then(function (registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div class="center">
+  <div class="wrapper">
+    <header>
+      <h2 class="h2">Lista de Compras</h2>
+    </header>
+
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="nome" data-toggle="collapse" data-parent="#accordion" href="#refrigerados">Refrigerados 🧊</a>
+          </h4>
+        </div>
+        <div id="refrigerados" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="inputField">
+              <input type="text" placeholder="Adicione seu item">
+              <button class="btn btn-primary btn-sm" disabled><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="lista list-group">
+            </ul>
+            <div class="footer">
+              <span>Você tem <span class="pendingTasks"></span> item(ns) pendentes!</span><br>
+              <button class="btn btn-primary btn-sm" disabled>Limpar itens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="nome" data-toggle="collapse" data-parent="#accordion" href="#higiene">Higiene 🧻</a>
+          </h4>
+        </div>
+        <div id="higiene" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="inputField">
+              <input type="text" placeholder="Adicione seu item">
+              <button class="btn btn-primary btn-sm" disabled><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="lista list-group">
+            </ul>
+            <div class="footer">
+              <span>Você tem <span class="pendingTasks"></span> item(ns) pendentes!</span><br>
+              <button class="btn btn-primary btn-sm" disabled>Limpar itens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="nome" data-toggle="collapse" data-parent="#accordion" href="#limpeza">Limpeza 🧹</a>
+          </h4>
+        </div>
+        <div id="limpeza" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="inputField">
+              <input type="text" placeholder="Adicione seu item">
+              <button class="btn btn-primary btn-sm" disabled><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="lista list-group">
+            </ul>
+            <div class="footer">
+              <span>Você tem <span class="pendingTasks"></span> item(ns) pendentes!</span><br>
+              <button class="btn btn-primary btn-sm" disabled>Limpar itens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="nome" data-toggle="collapse" data-parent="#accordion" href="#mantimentos">Mantimentos 🍞</a>
+          </h4>
+        </div>
+        <div id="mantimentos" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="inputField">
+              <input type="text" placeholder="Adicione seu item">
+              <button class="btn btn-primary btn-sm" disabled><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="lista list-group">
+            </ul>
+            <div class="footer">
+              <span>Você tem <span class="pendingTasks"></span> item(ns) pendentes!</span><br>
+              <button class="btn btn-primary btn-sm" disabled>Limpar itens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="nome" data-toggle="collapse" data-parent="#accordion" href="#hortifruti">Hortifruti 🍎</a>
+          </h4>
+        </div>
+        <div id="hortifruti" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="inputField">
+              <input type="text" placeholder="Adicione seu item">
+              <button class="btn btn-primary btn-sm" disabled><i class="fas fa-plus"></i></button>
+            </div>
+            <ul class="lista list-group">
+            </ul>
+            <div class="footer">
+              <span>Você tem <span class="pendingTasks"></span> item(ns) pendentes!</span><br>
+              <button class="btn btn-primary btn-sm" disabled>Limpar itens</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
